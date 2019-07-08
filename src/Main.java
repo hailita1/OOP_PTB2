@@ -16,11 +16,11 @@ public class Main {
         }
 
         public double getX1() {
-            return (-this.b + Math.pow(this.delta(), 0.5) / 2 * this.a);
+            return (-this.b + (Math.pow(this.delta(), 0.5))) / (2 * this.a);
         }
 
         public double getX2() {
-            return (-this.b - Math.pow(this.delta(), 0.5) / 2 * this.a);
+            return (-this.b - (Math.pow(this.delta(), 0.5) ))/ (2 * this.a);
         }
 
         public double getX() {
@@ -40,7 +40,7 @@ public class Main {
         if (ptb2.delta() > 0) {
             System.out.print("Phuong trinh co 2 nghiem, x1= " + ptb2.getX1() + " x2=" + ptb2.getX2());
         } else if (ptb2.delta() == 0) {
-            System.out.print("Phung trinh co nghiem kep, x= " + ptb2.getX());
+            System.out.print("Phuong trinh co nghiem kep, x= " + ptb2.getX());
         } else {
             System.out.print("Phuong trinh vo nghiem !!! ");
         }
