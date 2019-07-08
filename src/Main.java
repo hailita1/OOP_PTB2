@@ -1,33 +1,6 @@
 import java.util.Scanner;
 
 public class Main {
-    public static class PTB2 {
-        private double a, b, c;
-
-        public PTB2(double a, double b, double c) {
-            this.a = a;
-            this.b = b;
-            this.c = c;
-        }
-
-        public double delta() {
-            double delta = (this.b * this.b) - (4 * this.a * this.c);
-            return delta;
-        }
-
-        public double getX1() {
-            return (-this.b + (Math.pow(this.delta(), 0.5))) / (2 * this.a);
-        }
-
-        public double getX2() {
-            return (-this.b - (Math.pow(this.delta(), 0.5) ))/ (2 * this.a);
-        }
-
-        public double getX() {
-            return -this.b / (2 * this.a);
-        }
-    }
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Nhap a: ");
@@ -45,5 +18,30 @@ public class Main {
             System.out.print("Phuong trinh vo nghiem !!! ");
         }
 
+    }
+}
+class PTB2 {
+    private double a, b, c;
+
+    PTB2(double a, double b, double c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+
+    double delta() {
+        return (this.b * this.b) - (4 * this.a * this.c);
+    }
+
+    double getX1() {
+        return (-this.b + (Math.pow(this.delta(), 0.5))) / (2 * this.a);
+    }
+
+    double getX2() {
+        return (-this.b - (Math.pow(this.delta(), 0.5))) / (2 * this.a);
+    }
+
+    double getX() {
+        return -this.b / (2 * this.a);
     }
 }
